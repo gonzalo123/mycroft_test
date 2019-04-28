@@ -17,11 +17,11 @@ def check(key):
             d = json.load(json_data)
             json_data.close()
         return jsonify({
-            'text': d['description'],
-            'name': d['name']
+            'text': d['description_en'],
+            'name': d['name_en']
         })
     else:
-        return jsonify({'text': "No conozco la fruta {}. ¿Que te has creido que soy? Esto es un prototipo. ¿Seguro que no quieres decier Mango?".format(key)})
+        return jsonify({'text': "I don't know the fruit {}. Who the *#!# do you think I am? This is just a pilot. Maybe you meant Mango?".format(key)})
 
 
 if __name__ == "__main__":
